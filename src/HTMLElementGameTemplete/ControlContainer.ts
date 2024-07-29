@@ -34,6 +34,7 @@ export class ControlContainer extends GameElement {
     this.con.style.transform = "translate(-50%,-50%)";
     this.RefWidth = 3840;
     this.RefHeight = 1080;
+    this.con.style.marginTop = "80px";
 
     if (this.parent == null) {
       document.body.appendChild(this.con);

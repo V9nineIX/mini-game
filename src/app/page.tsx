@@ -29,14 +29,13 @@ export default function Home() {
   }
 
   useEffect(() => {
-
-    console.log('mount')
     start()
   }, [])
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        home
+    // <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex  min-h-screen ">
+      <div className=" bg-red-400 w-full relative" id="game_container">
+
       </div>
     </main>
   );
