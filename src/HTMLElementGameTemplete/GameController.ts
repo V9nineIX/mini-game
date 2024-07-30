@@ -23,7 +23,11 @@ export class GameController extends GameElement {
   public CurrentSpeed = 30;
   private fullSpeed = 50;
   private fuel = 500;
-  private item = ["/Group-2.svg", "/Group-3.svg", "/Group-4.svg"];
+  private item = [
+    "./images/Group-2.svg",
+    "./images/Group-3.svg",
+    "./images/Group-4.svg",
+  ];
   public itemList: object = {};
   private angleLimit = 50;
   private frameCount = 0;
