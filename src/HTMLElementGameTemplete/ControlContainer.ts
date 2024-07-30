@@ -36,10 +36,20 @@ export class ControlContainer extends GameElement {
     this.RefHeight = 1080;
     this.con.style.marginTop = "80px";
 
-    if (this.parent == null) {
-      document.body.appendChild(this.con);
+    // if (this.parent == null) {
+    //   document.body.appendChild(this.con);
+    // } else {
+    //   this.parent.resource.appendChild(this.con);
+    // }
+
+    const gameContainer = document.getElementById("game_container");
+
+    if (gameContainer) {
+      //TODO:  clear gameContainer
+      //gameContainer.innerHTML = "";
+      gameContainer.appendChild(this.con);
     } else {
-      this.parent.resource.appendChild(this.con);
+      console.error("game_container div not found.");
     }
 
     return this.con;
