@@ -28,8 +28,8 @@ export default async function handler(req, res) {
     });
     //  const address = "0x66217b8D37C2cb47e6e4BF714542C376eA3FEA6e";
 
-    // const nftContactAddress = 0xf3c58f45ac92b04d53f830509bdeb0ca6fbbed85; // real
-    const nftContactAddress = 0x49d686a19055ff0b1b471b759f34a03014fbae01;
+    const nftContactAddress = 0xf3c58f45ac92b04d53f830509bdeb0ca6fbbed85; // real
+    // const nftContactAddress = 0x49d686a19055ff0b1b471b759f34a03014fbae01;
     const filteredNFTs = [];
 
     response.result.map((nft) => {
