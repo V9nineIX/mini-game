@@ -4,12 +4,14 @@ import Image from "next/image";
 
 import { GameController } from "@/HTMLElementGameTemplete/GameController";
 import { GameElement } from "@/HTMLElementGameTemplete/GameElement";
-
-
+import { useNFT } from "@/hooks/useNFT";
+import { useAccount } from "wagmi";
 
 
 export default function Home() {
 
+  const { fetchNFT } = useNFT()
+  const { isConnected } = useAccount()
 
   let frame = 0;
   function start() {
@@ -28,9 +30,21 @@ export default function Home() {
     }
   }
 
+  const onFetchNFT = async () => {
+    await fetchNFT();
+  }
+
   useEffect(() => {
-    start()
+
+    // start()
   }, [])
+
+  useEffect(() => {
+    if (isConnected) {
+      onFetchNFT()
+    }
+  }, [isConnected])
+
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <main className="flex  min-h-screen ">
