@@ -12,7 +12,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noEmitOnError": false, // Ensure TypeScript emits output even if there are errors
+    "noEmitOnError": true, // Ensure TypeScript emits output even if there are errors
     "plugins": [
       {
         "name": "next"

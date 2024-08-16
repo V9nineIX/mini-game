@@ -31,7 +31,7 @@ export class GameController extends GameElement {
   public itemList: object = {};
   private angleLimit = 50;
   private frameCount = 0;
-  constructor(id: string, src: string, parent: GameElement) {
+  constructor(id: string, src: any, parent: any) {
     super(id, src, parent);
     this.start();
   }
