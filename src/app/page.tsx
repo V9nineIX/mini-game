@@ -6,11 +6,11 @@ import { GameController } from "@/HTMLElementGameTemplete/GameController";
 import { GameElement } from "@/HTMLElementGameTemplete/GameElement";
 import { useNFT } from "@/hooks/useNFT";
 import { useAccount } from "wagmi";
-
+import NFTCard from "@/components/NFTCard";
 
 export default function Home() {
 
-  const { fetchNFT } = useNFT()
+  const { fetchNFT, nftData } = useNFT()
   const { isConnected } = useAccount()
 
   let frame = 0;
@@ -36,7 +36,7 @@ export default function Home() {
 
   useEffect(() => {
 
-    // start()
+    start()
   }, [])
 
   useEffect(() => {
@@ -45,12 +45,30 @@ export default function Home() {
     }
   }, [isConnected])
 
+  // console.log(nftData)
+
   return (
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <main className="flex  min-h-screen ">
       <div className="w-full relative" id="game_container">
 
       </div>
+
+      {/* 
+      <div className="grid grid-cols-5 bg-red-400 w-full mt-20">
+        {nftData.length > 0 && nftData.map((nft, index) => {
+          // const { metaData } = nft;
+          return (
+            <NFTCard
+              key={index}
+              index={index}
+              nft={nft}
+              imageId={nft.imageId}
+            />
+          );
+        })}
+      </div> */}
+
     </main>
   );
 }
